@@ -1,0 +1,16 @@
+#include<stdio.h>
+int main()
+{
+	int first = 1, second = 2;
+	int i,n,term;
+	scanf("%d", &n);
+	printf("%d\t%d\t", first, second);
+	for (i = 3; i <= n; i++)
+	{
+		term = first + second;
+		printf("%d\t", term);
+		first = second;
+		second = term;
+	}
+	return 0;
+}

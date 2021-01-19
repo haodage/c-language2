@@ -1,0 +1,19 @@
+
+#include<stdio.h>
+int main()
+{
+	int grades;
+	int grade;
+	printf("input grades please");
+	scanf("%d", &grades);
+	grade = grades / 10;
+	printf("其对应的等级是：");
+	switch (grade)
+	{
+	case 10:printf("A"); break;
+	case 9:printf("B"); break;
+	case 8:printf("C"); break;
+	default:printf("ERROR!");
+	}
+		return 0;
+	}

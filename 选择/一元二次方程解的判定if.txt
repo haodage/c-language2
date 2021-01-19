@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	double a, b, c, x1, x2, q;
+	printf("put a,b,c please");
+	scanf("%lf%lf%lf", &a, &b, &c);
+	q = b * b - 4 * a * c;
+	if (q < 0)
+		printf("error!");
+	else if (q == 0)
+		printf("x1=x2=%lf", -b / (2 * a));
+	else
+		printf("x1=%lf,x2=%lf", (-b - sqrt(q)) / (2 * a), (-b + sqrt(q)) / (2 * a));
+
+	return 0;
+}

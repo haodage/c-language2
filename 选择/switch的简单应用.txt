@@ -1,0 +1,27 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	void t1(int a, int b);
+	void t2(int a, int b);
+	char ch;
+	int a = 1, b = 2;
+	scanf("%c", &ch);
+	switch (ch)
+	{
+	case'a':
+	case'A':t1(a,b); break;
+	case'b':
+	case'B':t2(a,b); break;
+	default:printf("error!");
+	}
+	return 0;
+}
+	void t1(int a, int b)
+	{
+		printf("%d", a + b);
+	}
+	void t2(int a, int b)
+	{
+		printf("%d", a * b);
+	}
