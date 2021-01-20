@@ -1,0 +1,25 @@
+//编译密码
+//A-Z,a-z
+//B-Y,b-y
+//C-X,c-x
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+	char str[100];
+	char ch,dh=' ';
+	gets_s(str);
+	int i;
+	for (i = 0; (ch = str[i]) != '\0'; i++)
+	{
+		if (ch >= 'A' && ch <= 'Z')
+			dh = 155 - ch;
+		if (ch >= 'a' && ch <= 'z')
+			dh = 219 - ch;
+		if (ch == ' ')
+			dh = ch;
+		printf("%c", dh);
+	}
+	puts(str);
+	return 0;
+}
