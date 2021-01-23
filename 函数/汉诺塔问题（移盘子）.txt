@@ -1,0 +1,26 @@
+#include<stdio.h>
+int main()
+{
+	void method(int n,char a, char b, char c);
+	int n;
+	printf("请输入n");
+	scanf("%d", &n);
+	method(n, 'a', 'b','c');
+	return 0;
+}
+void method(int n, char a, char b, char c)
+{
+	void move(char x, char y);
+	if (n == 1)
+		move(a, c);
+	else
+	{
+		method(n - 1, a, c, b);
+		move(a, c);
+		method(n - 1, b,a, c);
+	}
+}
+void move(char x, char y)
+{
+	printf("%c-%c\n", x, y);
+}
