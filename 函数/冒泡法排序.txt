@@ -1,0 +1,33 @@
+#include<stdio.h>
+int main()
+{
+	void paixu(int a[], int n);
+	int a[10];
+	int i;
+	printf("input");
+	for (i = 0; i < 10; i++)
+		scanf("%d", &a[i]);
+	paixu(a,10 );
+	for (i = 0; i <10; i++)
+	{
+		printf("%d", a[i]);
+	}
+	return 0;
+}
+void paixu(int a[], int n)
+{
+	int i, j;
+	for (i = 0; i < n - 1; i++)
+	{
+		for (j = i + 1; j < n; j++)
+		{
+			if (a[i] > a[j])
+			{
+				a[i] = a[i] + a[j];
+				a[j] = a[i] - a[j];
+				a[i] = a[i] - a[j];
+			}
+
+		}
+	}
+}
